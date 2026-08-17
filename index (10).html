@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation Church — St. Charles, Missouri</title>
+<meta name="description" content="Formation Church. Recover. Uncover. Discover. A church in the St. Charles, Missouri area. Interested in attending a service? Reach out.">
+<link rel="icon" type="image/png" href="logo-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C0D0F;
+    --surface:#131518;
+    --ink:#E8E6E1;
+    --muted:#9BA0A8;
+    --line:#26282C;
+    --give:#00DB72;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Newsreader', Georgia, serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* faint grain over everything */
+  body::after{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    z-index:3;
+  }
+  .display{
+    font-family:'Anton', Impact, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-weight:400;
+  }
+  a{color:var(--ink)}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:5;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 22px;
+    background:rgba(12,13,15,.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .mark{display:flex;align-items:center;gap:10px;text-decoration:none}
+  nav .mark img{height:30px;width:auto;display:block}
+  nav .mark span{font-family:'Anton',sans-serif;letter-spacing:.22em;font-size:13px;text-transform:uppercase}
+  nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  nav ul a{
+    font-family:'Anton',sans-serif;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    text-decoration:none;color:var(--muted);
+    transition:color .2s;
+  }
+  nav ul a:hover,nav ul a:focus-visible{color:var(--ink)}
+  nav ul a.give-link{
+    color:var(--give);
+    border:1px solid var(--give);
+    padding:8px 18px;border-radius:3px;
+  }
+  nav ul a.give-link:hover{background:var(--give);color:#0C0D0F}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+  /* ---------- hero ---------- */
+  header{
+    min-height:92vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+    padding:60px 24px 80px;
+    position:relative;
+  }
+  header .halo{
+    position:absolute;inset:0;
+    background:radial-gradient(ellipse 60% 45% at 50% 38%, rgba(232,230,225,.06), transparent 70%);
+    pointer-events:none;
+  }
+  header img.logo{
+    width:min(420px, 78vw);
+    height:auto;
+    opacity:0;
+    animation:rise 1.4s ease-out .1s forwards;
+  }
+  header h1{
+    font-size:clamp(22px, 4vw, 34px);
+    margin-top:44px;
+    letter-spacing:.16em;
+    opacity:0;
+    animation:rise 1.2s ease-out .5s forwards;
+  }
+  header p.lead{
+    max-width:520px;
+    margin:22px auto 0;
+    color:var(--muted);
+    font-size:20px;
+    opacity:0;
+    animation:rise 1.2s ease-out .8s forwards;
+  }
+  header p.lead a{color:var(--ink)}
+  .hero-actions{
+    margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
+    opacity:0;animation:rise 1.2s ease-out 1.05s forwards;
+  }
+  .btn{
+    font-family:'Anton',sans-serif;
+    font-size:14px;letter-spacing:.2em;text-transform:uppercase;
+    text-decoration:none;
+    padding:15px 34px;border-radius:3px;
+    border:1px solid var(--ink);
+    transition:background .2s,color .2s;
+  }
+  .btn:hover{background:var(--ink);color:var(--bg)}
+  .btn.solid-give{background:var(--give);border-color:var(--give);color:#0C0D0F}
+  .btn.solid-give:hover{background:#00c265;border-color:#00c265}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    header img.logo,header h1,header p.lead,.hero-actions{animation:none;opacity:1}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- sections ---------- */
+  section{
+    max-width:680px;
+    margin:0 auto;
+    padding:90px 24px;
+    border-top:1px solid var(--line);
+  }
+  section .eyebrow{
+    font-family:'Anton',sans-serif;
+    font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:26px;
+  }
+  section h2{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(26px,4vw,36px);
+    letter-spacing:.1em;text-transform:uppercase;
+    font-weight:400;
+    margin-bottom:28px;
+    line-height:1.25;
+  }
+  section p{margin-bottom:20px}
+  section p.quiet{color:var(--muted)}
+  .rule-words{
+    display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+    font-family:'Anton',sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--muted);
+    margin:34px 0 6px;
+  }
+  .rule-words span.dot{color:var(--ink)}
+
+  .attend{
+    margin-top:34px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    border-radius:4px;
+    padding:26px 28px;
+  }
+  .attend p{margin:0 0 14px}
+  .attend a.mail{
+    font-family:'Anton',sans-serif;
+    font-size:15px;letter-spacing:.14em;text-transform:uppercase;
+    text-decoration:none;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:3px;
+  }
+
+  /* ---------- give ---------- */
+  #give{text-align:center}
+  #give .tithely-wrap{margin-top:36px}
+  #give p.small{font-size:16px;color:var(--muted);margin-top:22px;margin-bottom:0}
+
+  /* ---------- contact ---------- */
+  #contact .big-mail{
+    display:inline-block;
+    font-family:'Anton',sans-serif;
+    font-size:clamp(17px,3.4vw,26px);
+    letter-spacing:.1em;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    padding:18px 26px;border-radius:3px;
+    margin:8px 0 26px;
+    transition:background .2s,color .2s;
+    word-break:break-all;
+  }
+  #contact .big-mail:hover{background:var(--ink);color:var(--bg)}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:44px 24px 60px;
+    text-align:center;
+    color:var(--muted);
+    font-size:15px;
+  }
+  footer .display{font-size:12px;letter-spacing:.3em;margin-bottom:10px;color:var(--ink)}
+
+  @media (max-width:620px){
+    nav ul{gap:16px}
+    nav .mark span{display:none}
+    section{padding:70px 20px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="mark" href="#top" aria-label="Formation Church home">
+    <img src="logo-white.png" alt="">
+    <span>Formation Church</span>
+  </a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="give-link" href="#give">Give</a></li>
+  </ul>
+</nav>
+
+<header id="top">
+  <div class="halo"></div>
+  <img class="logo" src="logo-white.png" alt="Formation Church — an open Bible with a sword. Recover, Uncover, Discover.">
+  <h1 class="display">A church you find on purpose</h1>
+  <p class="lead">We gather on Sunday afternoons in the St.&nbsp;Charles, Missouri area. Interested in attending a service? <a href="mailto:pastor@formationchurch.xyz">Reach out</a> — we'd love to have you.</p>
+  <div class="hero-actions">
+    <a class="btn" href="#contact">Plan a Visit</a>
+    <a class="btn solid-give" href="#give">Give</a>
+  </div>
+</header>
+
+<section id="about">
+  <p class="eyebrow">About</p>
+  <h2>Formed, then in formation</h2>
+  <p>Formation means two things here, and they happen in order.</p>
+  <p>First, God forms <em>you</em>. Think basic training — the slow, honest work of the Word taking a life apart and putting it back together the way it was meant to be. Recovery of what was lost. Uncovering what was hidden. Discovering what God actually says.</p>
+  <p>Then, you get <em>into</em> formation. Nobody puts on the armor of God to stand alone. We lock shields with one another — a small, tight-knit church where people are known by name, scripture is opened every week, and nobody watches from the back row.</p>
+  <p class="quiet">No stage. No smoke machines. An open Bible and a room of people who take it seriously.</p>
+  <div class="rule-words" aria-hidden="true">
+    <span>Recover</span><span class="dot">•</span><span>Uncover</span><span class="dot">•</span><span>Discover</span>
+  </div>
+  <div class="attend">
+    <p>We keep it simple on purpose, and we'd rather meet you than market to you. If you're interested in attending a service, email the pastor directly.</p>
+    <a class="mail" href="mailto:pastor@formationchurch.xyz">pastor@formationchurch.xyz</a>
+  </div>
+</section>
+
+<section id="give">
+  <p class="eyebrow">Give</p>
+  <h2>Sow into the work</h2>
+  <p>Giving keeps this church free to do what God has called it to do. Every gift goes to the ministry and mission of Formation Church.</p>
+  <div class="tithely-wrap">
+    <button class="tithely-give-button" data-form="0387fe69-364c-4e9e-987a-e8650a40d645" style="background-color: #00DB72; font-family: inherit; font-weight: bold; font-size: 19px; padding: 15px 70px; border-radius: 4px; cursor: pointer; background-image: none; color: white; text-shadow: none; display: inline-block; float: none; border: none;">Give</button>
+  </div>
+  <p class="small">Secure online giving through Tithe.ly.</p>
+</section>
+
+<section id="contact">
+  <p class="eyebrow">Contact</p>
+  <h2>Come see for yourself</h2>
+  <p>Interested in attending a service, have a question, or just want to talk? Email us — a real person reads and answers every message.</p>
+  <a class="big-mail" href="mailto:pastor@formationchurch.xyz">pastor@formationchurch.xyz</a>
+  <p class="quiet">We gather Sunday afternoons in the St.&nbsp;Charles area. Reach out and we'll get you the details.</p>
+</section>
+
+<footer>
+  <p class="display">Formation Church</p>
+  <p>St. Charles, Missouri &nbsp;·&nbsp; <a href="mailto:pastor@formationchurch.xyz">pastor@formationchurch.xyz</a></p>
+</footer>
+
+<script src="https://static.tithely.com/give/give.js" defer></script>
+</body>
+</html>
