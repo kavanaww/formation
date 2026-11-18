@@ -5,6 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formation Church — St. Charles, Missouri</title>
 <meta name="description" content="Formation Church. Recover. Uncover. Discover. A church in the St. Charles, Missouri area. Interested in attending a service? Reach out.">
+<link rel="canonical" href="https://formationchurch.xyz/">
+<meta name="theme-color" content="#0C0D0F">
+<!-- link preview (texts, Facebook, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Formation Church">
+<meta property="og:title" content="Formation Church — St. Charles, Missouri">
+<meta property="og:description" content="A church you find on purpose. Sunday afternoons in the St. Charles area. Recover • Uncover • Discover.">
+<meta property="og:url" content="https://formationchurch.xyz/">
+<meta property="og:image" content="https://formationchurch.xyz/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Formation Church logo — an open Bible with a sword">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Formation Church — St. Charles, Missouri">
+<meta name="twitter:description" content="A church you find on purpose. Sunday afternoons in the St. Charles area.">
+<meta name="twitter:image" content="https://formationchurch.xyz/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Church",
+  "name":"Formation Church",
+  "url":"https://formationchurch.xyz/",
+  "logo":"https://formationchurch.xyz/logo-white.png",
+  "image":"https://formationchurch.xyz/og-image.jpg",
+  "email":"pastor@formationchurch.xyz",
+  "slogan":"Recover • Uncover • Discover",
+  "address":{"@type":"PostalAddress","addressLocality":"St. Charles","addressRegion":"MO","addressCountry":"US"}
+}
+</script>
+<link rel="preload" as="image" href="logo-white.png">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -178,6 +208,33 @@
     padding-bottom:3px;
   }
 
+  /* ---------- what to expect ---------- */
+  .expect{list-style:none;margin-top:10px;counter-reset:step}
+  .expect li{
+    counter-increment:step;
+    display:grid;grid-template-columns:54px 1fr;gap:4px 14px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .expect li:last-child{border-bottom:none}
+  .expect li::before{
+    content:counter(step,decimal-leading-zero);
+    grid-row:span 2;
+    font-family:'Anton',sans-serif;font-size:26px;letter-spacing:.06em;
+    color:var(--muted);line-height:1.1;
+  }
+  .expect h3{
+    font-family:'Anton',sans-serif;font-weight:400;
+    font-size:16px;letter-spacing:.2em;text-transform:uppercase;
+  }
+  .expect p{margin:0;color:var(--muted);font-size:18px}
+
+  /* ---------- pastor ---------- */
+  #pastor .name{
+    font-family:'Anton',sans-serif;font-size:14px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);margin-top:-14px;margin-bottom:26px;
+  }
+
   /* ---------- give ---------- */
   #give{text-align:center}
   #give .tithely-wrap{margin-top:36px}
@@ -218,11 +275,12 @@
 
 <nav>
   <a class="mark" href="#top" aria-label="Formation Church home">
-    <img src="logo-white.png" alt="">
+    <img src="logo-nav.png" alt="" width="30" height="30">
     <span>Formation Church</span>
   </a>
   <ul>
     <li><a href="#about">About</a></li>
+    <li><a href="#visit">Visit</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a class="give-link" href="#give">Give</a></li>
   </ul>
@@ -230,11 +288,11 @@
 
 <header id="top">
   <div class="halo"></div>
-  <img class="logo" src="logo-white.png" alt="Formation Church — an open Bible with a sword. Recover, Uncover, Discover.">
+  <img class="logo" src="logo-white.png" width="840" height="840" fetchpriority="high" alt="Formation Church — an open Bible with a sword. Recover, Uncover, Discover.">
   <h1 class="display">A church you find on purpose</h1>
   <p class="lead">We gather on Sunday afternoons in the St.&nbsp;Charles, Missouri area. Interested in attending a service? <a href="mailto:pastor@formationchurch.xyz">Reach out</a> — we'd love to have you.</p>
   <div class="hero-actions">
-    <a class="btn" href="#contact">Plan a Visit</a>
+    <a class="btn" href="#visit">Plan a Visit</a>
     <a class="btn solid-give" href="#give">Give</a>
   </div>
 </header>
@@ -253,6 +311,47 @@
     <p>We keep it simple on purpose, and we'd rather meet you than market to you. If you're interested in attending a service, email the pastor directly.</p>
     <a class="mail" href="mailto:pastor@formationchurch.xyz">pastor@formationchurch.xyz</a>
   </div>
+</section>
+
+<section id="visit">
+  <p class="eyebrow">Plan a Visit</p>
+  <h2>What a Sunday looks like</h2>
+  <p>Nothing fancy, nothing rushed. Here's what you'll walk into.</p>
+  <ol class="expect">
+    <li>
+      <h3>Worship</h3>
+      <p>We open by singing. No show — just people worshiping together.</p>
+    </li>
+    <li>
+      <h3>The Word</h3>
+      <p>Verse by verse through a book of the Bible. Right now we're working through Matthew. We dig into what the words actually mean, in plain language anyone can follow.</p>
+    </li>
+    <li>
+      <h3>Sharing</h3>
+      <p>After the message, the floor opens. Questions, pushback, what God is doing in your week — this is where it gets real.</p>
+    </li>
+    <li>
+      <h3>Communion</h3>
+      <p>We share the Lord's Supper together every week.</p>
+    </li>
+    <li>
+      <h3>Circle up</h3>
+      <p>We close by standing in a circle, holding hands, and praying over one another.</p>
+    </li>
+  </ol>
+  <div class="attend">
+    <p>Come as you are. Email the pastor and we'll send you the time and place.</p>
+    <a class="mail" href="mailto:pastor@formationchurch.xyz?subject=Planning%20a%20visit">pastor@formationchurch.xyz</a>
+  </div>
+</section>
+
+<section id="pastor">
+  <p class="eyebrow">Pastor</p>
+  <h2>Meet Pastor Moose</h2>
+  <p class="name">Timothy “Moose” Kavanagh · Founding Senior Pastor</p>
+  <p>Moose has spent more than thirteen years in the trenches with people — walking alongside men, women and teenagers as God rebuilds their lives. Formation grew out of that work: nine people in a living room with an open Bible in July 2025.</p>
+  <p>He preaches verse by verse, loves digging into the original words, and keeps it plain enough that anybody can follow. He's pursuing a master's in ministry at Lincoln Christian Seminary.</p>
+  <p>Moose and his wife Ashlie have five kids. Come on a Sunday and you'll meet the whole crew.</p>
 </section>
 
 <section id="give">
