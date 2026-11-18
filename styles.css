@@ -279,3 +279,9 @@ section h1.h2like{
 /* keep footer at the bottom on short pages */
 body{min-height:100vh;display:flex;flex-direction:column}
 body > main{flex:1}
+/* pastors */
+.leader{padding:10px 0 46px;margin-bottom:40px;border-bottom:1px solid var(--line)}
+.leader:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:10px}
+.leader-photo{display:block;width:100%;height:auto;border-radius:4px;margin-bottom:28px;filter:saturate(.9)}
+.leader-name{font-family:'Anton',sans-serif;font-weight:400;font-size:24px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+#pastor .leader .name{margin-top:-10px}
