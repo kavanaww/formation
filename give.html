@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Give — Formation Church</title>
+<meta name="description" content="Give to Formation Church securely online through Tithe.ly.">
+<link rel="canonical" href="https://formationchurch.xyz/give.html">
+<meta name="theme-color" content="#0C0D0F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Formation Church">
+<meta property="og:title" content="Give — Formation Church">
+<meta property="og:description" content="Give to Formation Church securely online through Tithe.ly.">
+<meta property="og:url" content="https://formationchurch.xyz/give.html">
+<meta property="og:image" content="https://formationchurch.xyz/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Formation Church logo — an open Bible with a sword">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Give — Formation Church">
+<meta name="twitter:description" content="Give to Formation Church securely online through Tithe.ly.">
+<meta name="twitter:image" content="https://formationchurch.xyz/og-image.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="mark" href="./" aria-label="Formation Church home">
+    <img src="logo-nav.png" alt="" width="30" height="30">
+    <span>Formation Church</span>
+  </a>
+  <div class="nav-right">
+    <ul id="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="visit.html">Visit</a></li>
+      <li><a href="pastor.html">Pastor</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="give-link" href="give.html" aria-current="page">Give</a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+<section id="give">
+  <p class="eyebrow">Give</p>
+  <h1 class="h2like">Sow into the work</h1>
+  <p>Giving keeps this church free to do what God has called it to do. Every gift goes to the ministry and mission of Formation Church.</p>
+  <div class="tithely-wrap">
+    <button class="tithely-give-button" data-form="0387fe69-364c-4e9e-987a-e8650a40d645" style="background-color: #00DB72; font-family: inherit; font-weight: bold; font-size: 19px; padding: 15px 70px; border-radius: 4px; cursor: pointer; background-image: none; color: white; text-shadow: none; display: inline-block; float: none; border: none;">Give</button>
+  </div>
+  <p class="small">Secure online giving through Tithe.ly.</p>
+</section>
+</main>
+
+<footer>
+  <p class="display">Formation Church</p>
+  <p>St. Charles, Missouri &nbsp;·&nbsp; <a href="mailto:pastor@formationchurch.xyz">pastor@formationchurch.xyz</a></p>
+</footer>
+
+<script>
+  (function(){
+    var nav=document.getElementById('nav'), btn=nav.querySelector('.menu-toggle');
+    btn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+  })();
+</script>
+<script src="https://static.tithely.com/give/give.js" defer></script>
+</body>
+</html>
